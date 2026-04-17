@@ -1,0 +1,47 @@
+import{m as n,M as e}from"./MarkdownPage-CIzn9eqy.js";import{e as a}from"./components-75YO2b61.js";const t=`# About Me
+
+## 自己紹介
+### 居住地
+日本、長野県
+
+### 仕事以外にやっていること
+#### 子育て
+幼児のお世話をしています。子供が生まれてから自分のための時間がとりにくくなり、下に挙げているような活動は、ほぼお休みしています。
+
+#### 出かける
+日本各地の様々な街に出かけてきました。高速道路はあまり使わず、下道を走っています。好きな国道は9号です。
+
+#### 登山
+大学時代から登っています。北アルプスと八ヶ岳周辺に比較的詳しいです。
+
+#### ロードバイク
+クロモリのロードバイクに乗って乗鞍や麦草峠などに行っていました。
+
+
+## 技術的なことの紹介
+
+### スキル
+
+#### 最近
+- Golang (Echo)
+- php (Laravel, WordPress)
+- JavaScript, TypeScript
+- Vue
+- React, Next.js
+- Mysql
+
+#### 3年以上前
+- Java,
+- VB.NET,
+- Oracle Database,
+- SQL Server
+
+### 最近の仕事について
+
+- 業務系のシステム開発が多い。
+- 要件をもらって、設計から開発まで通してやる。
+- フロントエンドやバックエンドといった領域を意識せずに仕事をしています。
+
+### 公開情報
+
+Zenn https://zenn.dev/tanoshima`,r=n.parse(t);function p(){return a(e,{title:"AboutMe",html:r,prev:{href:"/",label:"Readme"}})}export{p as default};

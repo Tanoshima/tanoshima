@@ -1,23 +1,37 @@
 {
   "name": "me",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
+    "test": "bash test-dev.sh",
+    "format": "biome format --write .",
+    "check": "biome check --write ."
+  },
+  "dependencies": {
+    "@solidjs/router": "^0.15.3",
+    "@solidjs/start": "^1.0.0",
+    "marked": "^15.0.0",
+    "solid-js": "^1.9.0",
+    "vinxi": "^0.5.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.12",
+    "typescript": "^5.0.0",
+    "vite-plugin-solid": "^2.11.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tanoshima/tanoshima.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Tanoshima/tanoshima/issues"
-  },
-  "homepage": "https://github.com/Tanoshima/tanoshima#readme",
-  "devDependencies": {
-    "honkit": "^3.6.23"
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild"
+    ]
   }
 }

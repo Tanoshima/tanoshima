@@ -1,3 +1,6 @@
 #!/bin/sh
+set -e
 
-npx honkit build ./ ./docs
+pnpm build
+rm -rf docs
+cp -r .output/public docs

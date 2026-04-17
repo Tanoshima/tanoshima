@@ -1,0 +1,206 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	color: #333;
+	background: #fff;
+}
+
+/* ── Layout ── */
+.book {
+	display: flex;
+	min-height: 100vh;
+}
+
+.book-summary {
+	width: 300px;
+	min-width: 300px;
+	background: #fafafa;
+	border-right: 1px solid #e8e8e8;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	overflow-y: auto;
+	padding: 20px 0;
+}
+
+.book-body {
+	margin-left: 300px;
+	flex: 1;
+	min-width: 0;
+}
+
+.body-inner {
+	position: relative;
+}
+
+/* ── Page header ── */
+.book-header {
+	padding: 20px 30px 10px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.book-header h1 {
+	margin: 0;
+	font-size: 20px;
+	font-weight: 600;
+	color: #333;
+}
+
+/* ── Page content ── */
+.page-wrapper {
+	padding: 20px 30px 60px;
+}
+
+.page-inner {
+	max-width: 800px;
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3 {
+	font-weight: 600;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.markdown-section h1 {
+	font-size: 1.6em;
+	border-bottom: 1px solid #e8e8e8;
+	padding-bottom: 0.3em;
+}
+
+.markdown-section h2 {
+	font-size: 1.3em;
+}
+
+.markdown-section h3 {
+	font-size: 1.1em;
+}
+
+.markdown-section p {
+	line-height: 1.7;
+	margin: 0.8em 0;
+}
+
+.markdown-section a {
+	color: #008cff;
+	text-decoration: none;
+}
+
+.markdown-section a:hover {
+	text-decoration: underline;
+}
+
+.markdown-section code {
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+	font-size: 0.88em;
+	background: #f4f4f4;
+	border-radius: 3px;
+	padding: 0.1em 0.35em;
+}
+
+.markdown-section pre {
+	background: #f4f4f4;
+	border-radius: 4px;
+	padding: 16px;
+	overflow-x: auto;
+	line-height: 1.5;
+}
+
+.markdown-section pre code {
+	background: none;
+	padding: 0;
+	font-size: 0.87em;
+}
+
+.markdown-section ul,
+.markdown-section ol {
+	padding-left: 1.5em;
+	line-height: 1.7;
+}
+
+/* ── Sidebar nav (higher specificity than .markdown-section a, placed after) ── */
+.summary {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.summary .chapter {
+	margin: 0;
+}
+
+.summary .chapter a {
+	display: block;
+	padding: 8px 20px;
+	color: #555;
+	text-decoration: none;
+	font-size: 14px;
+	border-left: 3px solid transparent;
+	transition: background 0.1s;
+}
+
+.summary .chapter a:hover {
+	background: #f0f0f0;
+	color: #333;
+}
+
+.summary .chapter a.active {
+	color: #008cff;
+	border-left-color: #008cff;
+	background: #f0f7ff;
+	font-weight: 600;
+}
+
+/* ── Page navigation ── */
+.navigation {
+	position: fixed;
+	bottom: 0;
+	left: 300px;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	pointer-events: none;
+}
+
+.navigation-prev,
+.navigation-next {
+	pointer-events: all;
+	padding: 20px 24px;
+	font-size: 28px;
+	color: #ccc;
+	text-decoration: none;
+	transition: color 0.15s;
+}
+
+.navigation-prev:hover,
+.navigation-next:hover {
+	color: #008cff;
+}
+
+.navigation-next {
+	margin-left: auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+	.book-summary {
+		display: none;
+	}
+
+	.book-body {
+		margin-left: 0;
+	}
+
+	.navigation {
+		left: 0;
+	}
+}
